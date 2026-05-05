@@ -8,7 +8,7 @@ A beautiful and modern Qt Fluent Design component library with 90+ high-quality 
 <a href="README.md">English</a> | <a href="README_ZH.md">简体中文</a>
 </p>
 
-[![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-BSL%201.1-blue.svg)](LICENSE)
 [![Qt](https://img.shields.io/badge/Qt-5.12%2B-green.svg)](https://www.qt.io/)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)](https://github.com/toddming/QFluentKit)
 
@@ -386,7 +386,9 @@ QFluentKit/
 
 ## License
 
-This project is open source under the [GPLv3](LICENSE) license.
+QFluentKit is licensed under the [Business Source License 1.1](LICENSE). It is free for personal and non-commercial use.
+
+**Commercial Use**: If you want to use QFluentKit in a commercial project, please contact [toddming@qq.com](mailto:toddming@qq.com) for a commercial license.
 
 ---
 

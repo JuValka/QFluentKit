@@ -8,7 +8,7 @@
 <a href="README.md">English</a> | <a href="README_ZH.md">简体中文</a>
 </p>
 
-[![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-BSL%201.1-blue.svg)](LICENSE)
 [![Qt](https://img.shields.io/badge/Qt-5.12%2B-green.svg)](https://www.qt.io/)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)](https://github.com/toddming/QFluentKit)
 
@@ -387,7 +387,9 @@ QFluentKit/
 
 ## 开源协议
 
-本项目采用 [GPLv3](LICENSE) 协议开源。
+QFluentKit 采用 [Business Source License 1.1](LICENSE) 协议，个人和非商业用途免费使用。
+
+**商用授权**：如需在商业项目中使用 QFluentKit，请联系 [toddming@qq.com](mailto:toddming@qq.com) 获取商用授权。
 
 ---
 
