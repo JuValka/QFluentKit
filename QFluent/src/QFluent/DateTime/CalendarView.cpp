@@ -63,40 +63,19 @@ QPropertyAnimation* ViewScrollBar::ani() const
 }
 
 
-CalendarButton::CalendarButton(const QIcon &icon, QWidget* parent)
-    : TransparentToolButton(icon, parent) {
-}
-
-void CalendarButton::paintEvent(QPaintEvent* event)
+void CalendarButton::drawIcon(QPainter* painter, const QRectF& rect, Fluent::ThemeMode theme)
 {
-    // Temporarily clear the icon so QToolButton::paintEvent doesn't draw it
-    QIcon savedIcon;
-    if (!icon().isNull()) {
-        savedIcon = icon();
-        QToolButton::setIcon(QIcon());
-    }
+    Q_UNUSED(rect);
+    Q_UNUSED(theme);
 
-    QToolButton::paintEvent(event);
+    int w = isPressed() ? 9 : 10;
+    int h = isPressed() ? 9 : 10;
+    qreal y = (height() - h) / 2.0;
+    qreal x = (width() - w) / 2.0;
 
-    if (!savedIcon.isNull()) {
-        QToolButton::setIcon(savedIcon);
-    }
-
-    QPainter painter(this);
-    painter.setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform);
-
-    if (!isEnabled()) {
-        painter.setOpacity(0.43);
-    } else if (isPressed()) {
-        painter.setOpacity(0.63);
-    }
-
-    int w = isPressed() ? 12 : 11;
-    int h = isPressed() ? 12 : 11;
-    int y = (height() - h) / 2;
-    int x = (width() - w) / 2;
-
-    icon().paint(&painter, QRect(x, y, w, h));
+    QHash<QString, QString> attrs;
+    attrs["fill"] = Theme::isDark() ? "#9c9c9c" : "#5e5e5e";
+    FluentIconUtils::drawIcon(FluentIcon(fluentIcon().iconType()), painter, QRectF(x, y, w, h), Fluent::ThemeMode::AUTO, false, attrs);
 }
 
 
@@ -302,9 +281,9 @@ void ScrollViewBase::mouseReleaseEvent(QMouseEvent* e) {
 CalendarViewBase::CalendarViewBase(QWidget* parent)
     : QFrame(parent),
       m_titleButton(new QPushButton(this)),
-      m_resetButton(new CalendarButton(Fluent::icon(Fluent::IconType::CANCEL), this)),
-      m_upButton(new CalendarButton(Fluent::icon(Fluent::IconType::CARE_UP_SOLID), this)),
-      m_downButton(new CalendarButton(Fluent::icon(Fluent::IconType::CARE_DOWN_SOLID), this)),
+      m_resetButton(new CalendarButton(Fluent::IconType::CANCEL, this)),
+      m_upButton(new CalendarButton(Fluent::IconType::CARE_UP_SOLID, this)),
+      m_downButton(new CalendarButton(Fluent::IconType::CARE_DOWN_SOLID, this)),
       m_scrollView(nullptr),
       m_hBoxLayout(new QHBoxLayout()),
       m_vBoxLayout(new QVBoxLayout(this)) {

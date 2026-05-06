@@ -266,7 +266,7 @@ NavigationSeparator::NavigationSeparator(QWidget* parent)
 }
 
 void NavigationSeparator::setCompacted(bool isCompacted) {
-    setFixedSize(isCompacted ? 48 : expandWidth() + 10, 3);
+    setFixedSize(isCompacted ? 64 : expandWidth() + 10, 3);
     update();
 }
 

@@ -35,10 +35,10 @@ private:
 class CalendarButton : public TransparentToolButton {
     Q_OBJECT
 public:
-    CalendarButton(const QIcon &icon, QWidget* parent = nullptr);
+    using TransparentToolButton::TransparentToolButton;
 
 protected:
-    void paintEvent(QPaintEvent* event) override;
+    void drawIcon(QPainter* painter, const QRectF& rect, Fluent::ThemeMode theme = Fluent::ThemeMode::AUTO) override;
 };
 
 

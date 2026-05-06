@@ -68,6 +68,10 @@ public:
 
     // 公共方法
     NavigationWidget* widget(const QString& routeKey);
+    void addItem(const QString& routeKey, Fluent::IconType iconType, const QString& text,
+                 const std::function<void()>& onClick = nullptr, bool selectable = true,
+                 NavigationPanel::ItemPosition position = NavigationPanel::ItemPosition::TOP);
+
     void addItem(const QString& routeKey, const QIcon& icon, const QString& text,
                  const std::function<void()>& onClick = nullptr, bool selectable = true,
                  NavigationPanel::ItemPosition position = NavigationPanel::ItemPosition::TOP);
@@ -76,13 +80,17 @@ public:
                    const std::function<void()>& onClick = nullptr,
                    NavigationPanel::ItemPosition position = NavigationPanel::ItemPosition::TOP);
 
+    void insertItem(int index, const QString& routeKey, Fluent::IconType iconType, const QString& text,
+                    const std::function<void()>& onClick = nullptr, bool selectable = true,
+                    NavigationPanel::ItemPosition position = NavigationPanel::ItemPosition::TOP);
+
     void insertItem(int index, const QString& routeKey, const QIcon& icon, const QString& text,
-                   const std::function<void()>& onClick = nullptr, bool selectable = true,
-                   NavigationPanel::ItemPosition position = NavigationPanel::ItemPosition::TOP);
+                    const std::function<void()>& onClick = nullptr, bool selectable = true,
+                    NavigationPanel::ItemPosition position = NavigationPanel::ItemPosition::TOP);
 
     void insertWidget(int index, const QString& routeKey, NavigationWidget* widget,
-                     const std::function<void()>& onClick = nullptr,
-                     NavigationPanel::ItemPosition position = NavigationPanel::ItemPosition::TOP);
+                      const std::function<void()>& onClick = nullptr,
+                      NavigationPanel::ItemPosition position = NavigationPanel::ItemPosition::TOP);
 
     void addSeparator(NavigationPanel::ItemPosition position = NavigationPanel::ItemPosition::TOP);
 
