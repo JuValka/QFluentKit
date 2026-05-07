@@ -1,5 +1,7 @@
 # QFluentKit
 
+> **Derivative Work Notice**: This project is a C++ port of [PyQt-Fluent-Widgets](https://github.com/zhiyiYo/PyQt-Fluent-Widgets) by zhiyiYo. As a derivative work, it is licensed under GPL-3.0 in compliance with the original project's license.
+
 <div align="center">
 
 A beautiful and modern Qt Fluent Design component library with 90+ high-quality out-of-the-box components
@@ -8,7 +10,7 @@ A beautiful and modern Qt Fluent Design component library with 90+ high-quality 
 <a href="README.md">English</a> | <a href="README_ZH.md">简体中文</a>
 </p>
 
-[![License](https://img.shields.io/badge/license-BSL%201.1-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-GPL%203.0-blue.svg)](LICENSE)
 [![Qt](https://img.shields.io/badge/Qt-5.12%2B-green.svg)](https://www.qt.io/)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)](https://github.com/toddming/QFluentKit)
 
@@ -386,9 +388,7 @@ QFluentKit/
 
 ## License
 
-QFluentKit is licensed under the [Business Source License 1.1](LICENSE). It is free for personal and non-commercial use.
-
-**Commercial Use**: If you want to use QFluentKit in a commercial project, please contact [toddming@qq.com](mailto:toddming@qq.com) for a commercial license.
+QFluentKit is licensed under the [GNU General Public License v3.0](LICENSE).
 
 ---
 
@@ -401,7 +401,7 @@ Issues and Pull Requests are welcome!
 ## Acknowledgments
 
 - Core window management: [QWindowKit](https://github.com/stdware/qwindowkit)
-- Design inspiration from: [PyQt-Fluent-Widgets](https://github.com/zhiyiYo/PyQt-Fluent-Widgets)
+- Based on: [PyQt-Fluent-Widgets](https://github.com/zhiyiYo/PyQt-Fluent-Widgets) — This project is a C++ port/derivative of PyQt-Fluent-Widgets.
 
 ---
 
